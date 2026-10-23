@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Report a security problem in this tool
+    url: https://github.com/Rebott-Business-Solutions/supabase-production-audit/security/advisories/new
+    about: Report it privately. Never post details of a real project.
+  - name: Want us to audit your project?
+    url: https://rebott.co.za/#contact
+    about: We run this as part of a fixed-price production readiness audit.

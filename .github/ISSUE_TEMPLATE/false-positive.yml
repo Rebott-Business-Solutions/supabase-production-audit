@@ -1,0 +1,34 @@
+name: False positive
+description: The audit flags something that is actually safe.
+labels: ["false positive"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Don't paste anything from a real project.** Use invented table and function names, the way `test/fixtures.sql` does.
+  - type: input
+    id: check
+    attributes:
+      label: Check ID
+      placeholder: definer_function_callable_by_anon
+    validations:
+      required: true
+  - type: textarea
+    id: example
+    attributes:
+      label: Minimal SQL that reproduces it
+      description: The smallest made-up schema that triggers the finding.
+      render: sql
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why it's safe
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Postgres version
+      placeholder: "15.8"

@@ -1,0 +1,13 @@
+high | definer_function_callable_by_anon | public.delete_tenant(p uuid)
+high | materialized_view_exposed | public.mat_view
+high | owner_run_view_exposed | public.owner_view
+high | policy_allows_anon_write | public.guestbook: anyone deletes
+high | rls_disabled | public.no_rls
+medium | definer_function_callable_by_authenticated | public.signed_in_rpc()
+medium | definer_function_mutable_search_path | public.no_path()
+medium | owner_run_view_exposed | public.user_emails
+medium | rls_disabled | public.no_rls_signed_in
+medium | view_reads_auth_users | public.user_emails
+low | policy_calls_auth_per_row | public.guestbook: own rows
+info | policy_allows_anon_read | public.guestbook: anyone reads
+info | rls_no_policies | public.server_only

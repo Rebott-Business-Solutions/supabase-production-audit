@@ -1,0 +1,30 @@
+name: New check
+description: Suggest a Supabase mistake the audit should catch.
+labels: ["new check"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Don't paste anything from a real project.** Describe the pattern with invented names.
+  - type: textarea
+    id: problem
+    attributes:
+      label: The mistake
+      description: What goes wrong, and what can an attacker or user do because of it?
+    validations:
+      required: true
+  - type: textarea
+    id: example
+    attributes:
+      label: Made-up example
+      render: sql
+  - type: dropdown
+    id: where
+    attributes:
+      label: Can a query see it?
+      options:
+        - Yes, from the system catalogs (audit.sql)
+        - No, it needs the dashboard, repo or a terminal (CHECKLIST.md)
+        - Not sure
+    validations:
+      required: true

@@ -1,0 +1,6 @@
+# Audit output can name real tables and functions. Never commit it.
+*.out
+*.csv
+results/
+.env*
+.DS_Store

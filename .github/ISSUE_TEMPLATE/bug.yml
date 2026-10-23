@@ -1,0 +1,25 @@
+name: Bug
+description: The query errors, misses something it should catch, or the docs are wrong.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Don't paste anything from a real project.** If the bug lets a real vulnerability go unreported, use the private security report instead.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+  - type: input
+    id: where
+    attributes:
+      label: Where you ran it
+      placeholder: Supabase SQL editor / psql against Postgres 16.4
